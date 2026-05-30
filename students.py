@@ -21,8 +21,18 @@ def gradelvl(student):
     elif student["average"] >= 60:
             student["gradelevel"] = "D"
 
+topgrade = ["name", 0]
+
 for student in students:
     addtodict(student)
     gradelvl(student)
     print(f"{student['name']} , Your average grade is {student['average']} and your grade level is {student['gradelevel']} .")
+    if student["average"] > topgrade[1]:
+          topgrade[0] = student["name"]
+          topgrade[1] = student["average"]
+
+print(f"The student with the highest average grade is {topgrade[0]} with an average of {topgrade[1]}.")
+
+
+    
 
