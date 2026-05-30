@@ -9,4 +9,4 @@ def calculateaveragegrade(student):
 
 for student in students:
     avg_grade = calculateaveragegrade(student)
-    print(student["name"] + ", age" + str(student["age"]) + ". " + "Your average grade is " + str(avg_grade) + ".")
+    print(f"{student['name']} , age  {student['age']}  .Your average grade is {avg_grade} .")
