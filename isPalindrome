@@ -1,0 +1,17 @@
+class Solution(object):
+    def isPalindrome(self, s):
+        forward = ""
+        for letter in s.lower():
+            if letter.isalnum():
+                forward += letter
+        
+
+        return forward == forward[::-1]
+
+    #First convert the phrase into all lowercase letters.
+    #remove all punctuations.
+    #keep only alphanumeric characters.
+    #we can loop through the phrase and add all the alphanumeric characters into a string/list(list would be more efficient).
+    #return the result of forward == backward.
+    #Time complexity would be O(n), where n is the length of the string, since we are going through the whole string.
+    #Space complexity would be O(n), creating a string/list for a length of <= n.
